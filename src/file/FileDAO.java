@@ -34,6 +34,21 @@ public class FileDAO {
 		}
 		return -1; //데이터베이스 오류 
 	}
+	
+	// 삭제
+	public int deleteFile(String fileRealName) {
+		String SQL = "DELETE FROM FILE WHERE fileRealName = ?";
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt.setString(1, fileRealName);
+			
+			return pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return -1; //데이터베이스 오류 
+	}
+
 }
 
 
