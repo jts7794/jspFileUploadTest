@@ -1,9 +1,8 @@
-package File;
+package file;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-import com.mysql.cj.xdevapi.PreparableStatement;
 
 // Database Access Ojbect
 public class FileDAO {
@@ -12,7 +11,7 @@ public class FileDAO {
 	
 	public FileDAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306/boardtest?serverTimezone=UTC";
+			String dbURL = "jdbc:mysql://localhost:3306/jspTestFile?serverTimezone=UTC";
 			String dbID = "root";
 			String dbPassword = "root";
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -36,3 +35,6 @@ public class FileDAO {
 		return -1; //데이터베이스 오류 
 	}
 }
+
+
+
