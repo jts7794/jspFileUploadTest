@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>JSP FILE UPLOAD</title>
 </head>
-<body>
+<body>	
 										<!-- multipart request클래스와 매칭이 된다 -->
 	<form action="uploadAction.jsp" method="post" enctype="multipart/form-data">
 		FILE : <input type="file" name="file"><br>
