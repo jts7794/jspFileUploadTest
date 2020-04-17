@@ -12,7 +12,9 @@
 <body>
 	<%
 	
-	String directory = application.getRealPath("/upload/");
+	// 시큐어 코딩
+	//String directory = application.getRealPath("/upload/");
+	String directory = "C:/JSP/upload";
 	//System.out.print("deletefileaction : " + directory);
 	
 	String file = request.getParameter("fileRealName");
