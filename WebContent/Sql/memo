@@ -1,2 +1,8 @@
 C:\Users\jts20\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jspFileUploadTest(프로젝트이름)
 아래 upload폴더를 생성
+
+
+시큐어 코딩 root디렉토리를 하드코딩으로 경로 변경 uploadAction.jsp directory변수 확인
+C:\JSP\upload
+
+시큐어 코딩에 관한 기술 안내서는 KISA 한국인터넷진흥원 -> 기술안내서 가이드 -> JAVA시큐어 코딩 가이드에서 확인 가능

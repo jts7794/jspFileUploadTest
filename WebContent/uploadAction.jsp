@@ -14,8 +14,11 @@
 <title>JSP FILE UPLOAD</title>
 </head>
 <body>	
-	<%						
-		String directory = application.getRealPath("/upload/");
+	<%	//시큐어 코딩 root디렉토리를 하드코딩으로 새로운 디렉토리로 지정					
+		//String directory = application.getRealPath("/upload/");  
+		String directory = "C:/JSP/upload";
+		//시큐어 코딩 끝
+		
 		/* application : 내장 객체는 전체 프로젝트에 대한 자원을 관리하는 객체, 서버의 실제 프로젝트 경로에서 자원을 찾을 때 사용 */
 		int maxSize = 1024 * 1024 * 100;
 		/* 파일의 최대크기 100mega */
@@ -30,12 +33,20 @@
 		String fileRealName = multipartRequest.getFilesystemName("file");
 		/* getFilesystemName : 실제 업로드된 파일 이름 */ 
 		
+		// secure 코딩 적용 시작 (파일 업로드 전에)
+		if(!fileName.endsWith(".doc") && !fileName.endsWith(".hwp") && !fileName.endsWith(".pdf") && !fileName.endsWith(".xls") && !fileName.endsWith(".jpg")){
+			// 올바른 확장자가 아니라면 해당 파일을 지워버린다
+			File file = new File(directory + fileRealName);
+			file.delete();
+			out.write("업로드할 수 없는 확장자입니다.");
+			// secure 코딩 적용 끝
+		} else {
+						
 		new FileDAO().upload(fileName, fileRealName);
 		out.write("파일명 : "+ fileName + "<br>");
 		out.write("실제 파일명 : "+ fileRealName + "<br>");
-		
-		
-		
+				
+		}
 	 %>
 </body>
 </html>

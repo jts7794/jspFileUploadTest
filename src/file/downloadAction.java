@@ -19,7 +19,11 @@ public class downloadAction extends HttpServlet {
 		
 		String fileName = request.getParameter("file");
 		
-		String directory = this.getServletContext().getRealPath("/upload/");
+		// 시큐어 코딩
+		//String directory = this.getServletContext().getRealPath("/upload/");
+		String directory = "C:/JSP/upload";
+		// 시큐어 코딩 끝
+		
 		File file = new File(directory + "/" + fileName);
 		
 		// mimeType : 어떤 데이터를 주고 받을지에 대한 정보를 담는다.
