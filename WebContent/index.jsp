@@ -9,7 +9,10 @@
 <body>	
 										<!-- multipart request클래스와 매칭이 된다 -->
 	<form action="uploadAction.jsp" method="post" enctype="multipart/form-data">
-		FILE : <input type="file" name="file"><br>
+		FILE : <input type="file" name="file1"><br>
+		FILE : <input type="file" name="file2"><br>
+		FILE : <input type="file" name="file3"><br>
+		
 		<input type="submit" value="UPLOAD"><br>
 	</form>
 	<br>

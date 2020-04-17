@@ -1,3 +1,12 @@
+1)데이터베이스 구축
+2)업로드 양식 페이지 작성
+3)데이터베이스 연동 클래스 작성
+4)업로드 처리 페이지 작성
+5)파일 다운로드 페이지 작성
+6)보안 코딩 적용
+7)파일 다운로드 한 횟수 저장
+8)다중 업로드 구현
+
 C:\Users\jts20\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jspFileUploadTest(프로젝트이름)
 아래 upload폴더를 생성
 
@@ -6,3 +15,5 @@ C:\Users\jts20\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\
 C:\JSP\upload
 
 시큐어 코딩에 관한 기술 안내서는 KISA 한국인터넷진흥원 -> 기술안내서 가이드 -> JAVA시큐어 코딩 가이드에서 확인 가능
+
+사용자가 임의대로 업로드 할 파일의 개수를 정하도록 하고 싶다면? 자바스크립트를 이용해야한다. 
